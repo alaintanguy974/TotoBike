@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 /*Route::get('/', function () {
     return view('welcome');
 });*/
+//Route::get('/brand', [LoginController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'login']);
@@ -28,8 +29,9 @@ Route::group(['middleware' => ['is_connected']], function(){
  Route::get('/', [HomeController::class, 'index']);
 });
 
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/json/brand-cat', [ComplexRequestController::class, 'getBrandQuantityByCategoryJson']);
 
-//Route::get('/brand', [LoginController::class, 'index']);
 
 Route::get('/brand/create', [BrandController::class, 'form']);
 Route::post('/brand/create', [BrandController::class, 'create']);
@@ -60,5 +62,3 @@ Route::get('/stock/{id_store}/{product_id}/delete', [HomeController::class, 'del
 
 //Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/json/brand-cat', [ComplexRequestController::class, 'getBrandQuantityByCategoryJson']);

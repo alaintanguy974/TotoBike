@@ -1,6 +1,7 @@
 @extends('template')
 
 @section('contenu')
+<link rel="icon" type="image/jpg" alt="logo Bike Store" href="../../public/img/icons/LogoHaro.jpg" />
 
 <div class="card-body" style="background-image: url('../img/bg-02.png');">
 
@@ -20,8 +21,8 @@
         <div class="tab-content">
             <!--FENETRE  PRODUCTION  ---------------------------------------------------------------------------->
             <div class="tab-pane fade show active" id="production" role="tabpanel">
-                <div class="p-t-15">
-                    <div class="col-md-7">
+                <div class="p-t-1">
+                    <div class="col-md-8">
                         <div class="card">
                             <div class="card-body">
                                 <h4>“La réussite de la production repose sur les attentions prêtées aux détails.”</h4>

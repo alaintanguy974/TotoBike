@@ -9,16 +9,12 @@ use App\Models\Manager\LoginManagerInterface;
 use Illuminate\Http\Request;
 
 
-class LoginController extends Controller
-{
+class LoginController extends Controller{
     public function index(){
         return view('login');
     }
 
-
     public function login(LoginRequest $request, LoginManagerInterface $loginManager){
-
-
         $username = $request->input(['username']);
         $password = $request->input(['pass']);
 

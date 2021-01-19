@@ -3,7 +3,7 @@
 @section('contenu')
 
 <div class="p-t-15">
-<div class="col-md-7">
+<div class="col-md-10">
     <div class="card">
         <div class="card-body">
             <!--<h4>“L'abondance est le fruit d'une bonne administration.”</h4>
@@ -41,30 +41,41 @@
                                         <tbody>
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td>Otto</td>
-                                                <td>Mark</td>
-                                                <td>@mdo</td>
-                                                <td>0262000000</td>
+                                                <td>Toto</td>
+                                                <td>Marc</td>
+                                                <td>@.net</td>
+                                                <td>0692</td>
                                                 <td>Santa-Cruz</td>
-                                                <td>Raymond</td>
+                                                <td>Alain</td>
                                             </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                                <td>0262000000</td>
-                                                <td>Santa-Cruz</td>
-                                                <td>Raymond</td>
-                                            </tr>
+                                             <tr>
+                                                 <th scope="row">2</th>
+                                                 <td>Coco</td>
+                                                 <td>Yann</td>
+                                                 <td>@twit</td>
+                                                 <td>0262</td>
+                                                 <td>Santa-Cruz</td>
+                                                 <td>Alain</td>
+                                             </tr>
+
                                             <tr>
                                                 <th scope="row">3</th>
-                                                <td colspan="2">Larry the Bird</td>
-                                                <td>@twitter</td>
-                                                <td>0262000000</td>
+                                                <td>Jaco</td>
+                                                <td>Tonton</td>
+                                                <td>@.mail</td>
+                                                <td>0262</td>
                                                 <td>Santa-Cruz</td>
-                                                <td>Raymond</td>
+                                                <td>Ray</td>
                                             </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td colspan="2">Larry</td>
+                                                <td>@twit</td>
+                                                <td>0262</td>
+                                                <td>Santa-Cruz</td>
+                                                <td>Alain</td>
+                                            </tr>
+                                               
                                         </tbody>
                                     </table>
                                 </div>
@@ -72,7 +83,7 @@
                                 <div class="col-xl-5">
 
                                     <div class="card-body">
-                                        <h4>Création d'un utilisateur</h4>
+                                        <h4>Enregistrer un utilisateur</h4>
                                         <form class="user">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" id="first_name" aria-describedby="firstNameHelp" placeholder="Prénom">

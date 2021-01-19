@@ -13,6 +13,8 @@ use App\Models\Dao\ProductDaoImpl;
 use App\Models\Dao\ProductDaoInterface;
 use App\Models\Dao\StockDaoImpl;
 use App\Models\Dao\StockDaoInterface;
+use App\Models\Dao\StaffDaoImpl;
+use App\Models\Dao\StaffDaoInterface;
 use App\Models\Dao\StoreDaoImpl;
 use App\Models\Dao\StoreDaoInterface;
 use App\Models\Manager\BrandManagerImpl;
@@ -25,6 +27,8 @@ use App\Models\Manager\ProductManagerImpl;
 use App\Models\Manager\ProductManagerInterface;
 use App\Models\Manager\StockManagerImpl;
 use App\Models\Manager\StockManagerInterface;
+use App\Models\Manager\StaffManagerImpl;
+use App\Models\Manager\StaffManagerInterface;
 use App\Models\Manager\StoreManagerImpl;
 use App\Models\Manager\StoreManagerInterface;
 use Illuminate\Support\ServiceProvider;
@@ -50,12 +54,15 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(ProductManagerInterface::class, ProductManagerImpl::class);
         $this->app->bind(StockDaoInterface::class, StockDaoImpl::class);
         $this->app->bind(StockManagerInterface::class, StockManagerImpl::class);
+        $this->app->bind(StaffDaoInterface::class, StaffDaoImpl::class);
+        $this->app->bind(StaffManagerInterface::class, StaffManagerImpl::class);
         $this->app->bind(LoginDaoInterface::class, LoginDaoImpl::class);
         $this->app->bind(LoginManagerInterface::class, LoginManagerImpl::class);
         $this->app->bind(StoreDaoInterface::class, StoreDaoImpl::class);
         $this->app->bind(StoreManagerInterface::class, StoreManagerImpl::class);
         $this->app->bind(ComplexRequestDaoInterface::class, ComplexRequestDaoImpl::class);
         $this->app->bind(ComplexRequestManagerInterface::class, ComplexRequestManagerImpl::class);
+
     }
 
     /**
