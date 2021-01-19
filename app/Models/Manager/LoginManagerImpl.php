@@ -7,8 +7,7 @@ use App\Models\Dao\LoginDaoInterface;
 use App\Models\Manager\LoginManagerInterface;
 use Illuminate\Support\Facades\Session;
 
-class LoginManagerImpl implements LoginManagerInterface
-{
+class LoginManagerImpl implements LoginManagerInterface{
 
    private $loginDao;
 
@@ -16,8 +15,7 @@ class LoginManagerImpl implements LoginManagerInterface
         $this->loginDao = $loginDao;
     }
 
-    public function logIn($username, $password){
-        
+    public function logIn($username, $password){        
         $authenticated = $this->loginDao->logIn($username, $password) != 0;
         if($authenticated){
             Session::put("connection", 'true');
