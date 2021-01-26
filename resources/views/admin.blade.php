@@ -1,13 +1,14 @@
-@extends('template')
+@extends('home')
 
-@section('contenu')
+@section('liste_du personnel')
+
 
 <div class="p-t-15">
 <div class="col-md-10">
     <div class="card">
         <div class="card-body">
-            <!--<h4>“L'abondance est le fruit d'une bonne administration.”</h4>
-            <h4 class="card-title">Custom Tab 1</h4>-->
+            <h4>“L'abondance est le fruit d'une bonne administration.”</h4>
+            <h4 class="card-title">Custom Tab 1</h4>
             <!-- Nav tabs -->
             <div class="custom-tab-1">
                 <ul class="nav nav-tabs mb-3">
@@ -71,14 +72,11 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div  id="register">
-                                    @include('register')
-                                </div>
-
-
-                               
                             </div>
                         </div>
+                    </div>
+                    <div class="tab-pane fade" id="register">
+                        @include('register')
                     </div>
 
                     <div class="tab-pane fade" id="profil">
