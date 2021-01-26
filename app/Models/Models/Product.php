@@ -59,7 +59,7 @@ class Product implements JsonSerializable{
 		$this->brand = $brand;
 	}
 
-		public function jsonSerialize(){
+	public function jsonSerialize(){
 		return [
 			"id" => $this->id,
 			"name" => $this->name,

@@ -32,7 +32,6 @@ Route::group(['middleware' => ['is_connected']], function(){
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/json/brand-cat', [ComplexRequestController::class, 'getBrandQuantityByCategoryJson']);
 
-
 Route::get('/brand/create', [BrandController::class, 'form']);
 Route::post('/brand/create', [BrandController::class, 'create']);
 Route::get('/brand/{id}/edit', [BrandController::class, 'formUpdate']);
@@ -59,6 +58,11 @@ Route::get('/stock/{id_store}/{product_id}/edit', [HomeController::class, 'formU
 Route::post('/stock/{id_store}/{product_id}/edit', [HomeController::class, 'update']);
 Route::get('/stock/{id_store}/{product_id}/delete', [HomeController::class, 'delete']);
 
+Route::get('/staff/create', [HomeController::class, 'form']);
+Route::post('/staff/create', [HomeController::class, 'create']);
+Route::get('/staff/{id}/edit', [HomeController::class, 'formUpdate']);
+Route::post('/staff/{id}/edit', [HomeController::class, 'update']);
+Route::get('/staff/{id}/delete', [HomeController::class, 'delete']);
 
 //Auth::routes();
 

@@ -3,7 +3,6 @@
 namespace App\Models\Manager;
 
 use App\Models\Models\Product;
-
 interface ProductManagerInterface{
     public function getAllProducts();
     public function getProductById($id);

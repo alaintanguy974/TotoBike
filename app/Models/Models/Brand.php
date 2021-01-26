@@ -6,10 +6,10 @@ use JsonSerializable;
 
 class Brand implements JsonSerializable{
 
-    private $id;
-    private string $name;
+	private $id;
+	private string $name;
 
-    public function getId(){
+	public function getId(){
 		return $this->id;
 	}
 
@@ -17,16 +17,15 @@ class Brand implements JsonSerializable{
 		$this->id = $id;
 	}
 
-	public function getName() : string {
+	public function getName() : string{
 		return $this->name;
 	}
-
+	
 	public function setName(string $name){
 		$this->name = $name;
 	}
 
-	public function jsonSerialize()
-    {
+	public function jsonSerialize()	{
 		return [
 			"id" => $this->id,
 			"name" => $this->name

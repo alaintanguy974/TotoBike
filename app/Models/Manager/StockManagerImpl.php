@@ -10,12 +10,13 @@ class StockManagerImpl implements StockManagerInterface
 
     private $stockDao;
 
-    public function __construct(StockDaoInterface $stockDao){
+    public function __construct(StockDaoInterface $stockDao)
+    {
         $this->stockDao = $stockDao;
     }
 
-    public function getAllStocks(){
+    public function getAllStocks()
+    {
         return $this->stockDao->getAllStocks();
     }
-
-}   
+} 

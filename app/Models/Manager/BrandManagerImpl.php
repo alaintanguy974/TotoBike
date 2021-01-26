@@ -38,4 +38,5 @@ class BrandManagerImpl implements BrandManagerInterface{
             throw new BrandException();
         }
     }
+    
 }

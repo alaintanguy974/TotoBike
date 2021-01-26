@@ -10,15 +10,19 @@ class StoreManagerImpl implements StoreManagerInterface
 
     private $storeDao;
 
-    public function __construct(StoreDaoInterface $storeDao){
+    public function __construct(StoreDaoInterface $storeDao)
+    {
         $this->storeDao = $storeDao;
     }
-     
-     public function getStoreById($id){
+
+    public function getStoreById($id)
+    {
         return $this->storeDao->getStoreById($id);
     }
 
-    public function getAllStores(){
+    public function getAllStores()
+    {
         return $this->storeDao->getAllStores();
-    }  
+    }
 }
+    

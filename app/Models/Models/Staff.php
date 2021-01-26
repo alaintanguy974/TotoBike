@@ -2,14 +2,23 @@
 
 namespace App\Models\Models;
 
+use JsonSerializable;
 use App\Models\Models\Store;
-class Staff{
 
-     private $username;
-    private $password;
-    private Store $store;
+class Staff implements JsonSerializable{
 
-    public function getUsername(){
+	private $username;
+	private $password;
+	private $id;
+	private $email;
+	private	$phone;
+	private	$active;
+	private $name;
+	private $names;
+	private $manager;
+	private Store $store;	
+
+	public function getUsername(){
 		return $this->username;
 	}
 	public function setUsername($username){
@@ -29,8 +38,10 @@ class Staff{
 	public function setPassword($password){
 		$this->password = $password;
 	}
-	
-   
+
+	public function getEmail(){
+		return $this->email;
+	}
 	public function setEmail($email){
 		$this->email = $email;
 	}
@@ -57,10 +68,37 @@ class Staff{
 	}
 
 	public function getNames(){
-		return $this->getNames();
+		return $this->names;
 	}
 	public function setNames($names){
 		$this->name = $names;
 	}
 
+	public function getManager(){
+		return $this->manager;
+	}
+	public function setManager($manager){
+		$this->manager = $manager;
+	}
+	
+
+	public function getStore(): Store{
+		return $this->store;
+	}
+	public function setStore(Store $store){
+		$this->store = $store;
+	}
+
+	public function jsonSerialize(){
+		return [
+			"id" => $this->id,
+			"first_name" => $this->name,
+			"last_name" => $this->names,
+			"email" =>  $this->email,
+			"phone" =>  $this->phone,
+			"active" =>  $this->active,
+			"manager_id" =>  $this->manager,
+			"password" =>  $this->password,
+		];
+	}
 }

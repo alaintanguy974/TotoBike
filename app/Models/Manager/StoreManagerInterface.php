@@ -2,7 +2,8 @@
 
 namespace App\Models\Manager;
 
-interface StoreManagerInterface{
+interface StoreManagerInterface
+{
     public function getAllStores();
     public function getStoreById($id);
 }

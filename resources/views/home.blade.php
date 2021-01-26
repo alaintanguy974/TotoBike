@@ -71,6 +71,37 @@
 @endforeach
 @stop
 
+@section('liste_du personnel')
+@foreach($staff as $sta)
+<tr>
+    <th>{{ $sta->getId() }}</th>
+    <td>{{ $sta->getNames() }}</td>
+    <td>{{ $sta->getName() }}</td>
+    <td>{{ $sta->getEmail() }}</td>
+    <td>{{ $sta->getPhone() }}</td>
+    <td>{{ $sta->getActive() }}</td>
+    <td>{{ $sta->getStore()->getName() }}</td>
+    <td>{{ $sta->getManager() }}</td>
+
+    <td class="col -5">
+
+        <a href="{{ url('/staff/'.$p->getId().'/create') }}">
+            <button type="button" class="btn btn-primary mb-1">Ajouter</button>
+        </a>
+
+        <a href="{{ url('/staff/'.$p->getId().'/edit') }}">
+            <button type="button" class="btn btn-secondary mb-1">Modifier</button>
+        </a>
+        <a href="{{ url('/staff/'.$p->getId().'/delete') }}">
+            <button type="button" class="btn btn-danger mb-1">Suprimer</button>
+        </a>
+    </td>
+
+</tr>
+@endforeach
+@stop
+
+
 @section('liste_des_stocks')
 
 <ul>

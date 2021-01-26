@@ -4,12 +4,12 @@
 
 <h4>MODIFIER le nom de la catégorie</h4>
 
-<form class="col-md-6" name="categories" action="{{ !empty($category) ? url('/categories/'.$category->getId().'/edit') : url('/categories/create')}}" method="post">
+<form class="col-md-6" name="categorY" action="{{ !empty($category) ? url('/category/'.$category->getId().'/edit') : url('/category/create')}}" method="post">
     @csrf
-    <div class="form-group row, form-categorie">
+    <div class="form-group row, form-categorY">
         <label for="categories" class="col-md-3 col-form-label">Nom :</label>
         <div class="col-md-9">
-            <input name="categories" type="text" class="form-control form-control-user" id="categories" placeholder= "New categorie" value="{{ !empty($category) ? $category->getName()  : "" }}">
+            <input name="categorY" type="text" class="form-control form-control-user" id="categorY" placeholder= "Nouvelle categorie" value="{{ !empty($category) ? $category->getName()  : "" }}">
         </div>
     </div>
     <div class="form-group row">

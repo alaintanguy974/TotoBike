@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('contenu')
-<link rel="icon" type="image/jpg" alt="logo Bike Store" href="../../public/img/icons/LogoHaro.jpg" />
+<link rel="icon" type="image/png" alt="logo Bike Store" href="../../public/img/icons/LogoHaro.png" />
 
 <div class="card-body" style="background-image: url('../img/bg-02.png');">
 
@@ -42,7 +42,7 @@
                                             <!-- MARQUE -->
                                             <div class="container">
                                                 <div class="row">
-                                                    <div class="col-xl-7">
+                                                    <div class="col-xl-8">
                                                         <h4>Liste des marques</h4>                                                        
                                                         <table class="table table-sm table-hover">
                                                             <thead>
@@ -106,8 +106,8 @@
                                                                 @yield('liste_des_produits')
                                                             </tbody>
                                                         </table>
-                                                    </div>
-                                                    
+
+                                                    </div>                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -130,31 +130,8 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                @yield('liste_des_stocks')
-                                                                <tr>
-                                                                    <th scope="row -4">1</th>
-                                                                    <td>Trek</td>
-                                                                    <td>23</td>
-                                                                    <td>Magasin</td>
-                                                                    <td>Production</td>
-                                                                    <td>1000.00</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">2</th>
-                                                                    <td>Surly</td>
-                                                                    <td>18</td>
-                                                                    <td>Magasin</td>
-                                                                    <td>Production</td>
-                                                                    <td>1000.00</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">3</th>
-                                                                    <td>Heller</td>
-                                                                    <td>134</td>
-                                                                    <td>Magasin</td>
-                                                                    <td>Production</td>
-                                                                    <td>1000.00</td>
-                                                                </tr>
+                                                                @yield('liste_des_stocks') 
+                                                                
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -197,7 +174,7 @@
                                             <!-- MARQUE -->
                                             <div class="container">
                                                 <div class="row">
-                                                    <div class="col-xl-6">
+                                                    <div class="col-xl-10">
                                                         <h4>Liste des marques</h4>
                                                         <table class="table table-sm table-hover">
                                                             <thead>
@@ -383,11 +360,11 @@
             </div>
 
             <!--FENETRE  REPORTING   ----------------------------------------------------------------->
+            <div class="tab-pane fade" id="reporting" role="tabpanel" style="background-color: white;">
 
-            <div class="tab-pane fade"  id="reporting" role="tabpanel">
                 @include('reporting')
             </div>
-
+            
             <!--FENETRE  ADMINISTRATION   ----------------------------------------------------------------->
 
             <div class="tab-pane fade"  id="administration">

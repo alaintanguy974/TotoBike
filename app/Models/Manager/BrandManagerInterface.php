@@ -12,4 +12,5 @@ interface BrandManagerInterface {
     public function createBrand(Brand $brand);
     public function updateBrand(Brand $brand);  
     
+    
 }

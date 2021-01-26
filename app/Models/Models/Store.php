@@ -1,12 +1,9 @@
 <?php
 
 namespace App\Models\Models;
-
-use App\Models\Models\Stock;
-
 class Store{
 
-    private $id;
+	private $id;
 	private string $name;
 	private $phone;
 	private $email;
@@ -16,60 +13,75 @@ class Store{
 	private $zipCode;
 
 
-    public function getId(){
+	public function getId()
+	{
 		return $this->id;
 	}
-	public function setId($id){
+	public function setId($id)
+	{
 		$this->id = $id;
 	}
 
-	public function getName(){
+	public function getName()
+	{
 		return $this->name;
 	}
-	public function setName($name){
+	public function setName($name)
+	{
 		$this->name = $name;
 	}
 
-	public function getPhone(){
+	public function getPhone()
+	{
 		return $this->phone;
 	}
-		public function setPhone($phone){
+	public function setPhone($phone)
+	{
 		$this->phone = $phone;
 	}
 
-	public function getEmail(){
+	public function getEmail()
+	{
 		return $this->email;
 	}
-	public function setEmail($email){
+	public function setEmail($email)
+	{
 		$this->email = $email;
-	}	  
+	}
 
-	public function getStreet(){
+	public function getStreet()
+	{
 		return $this->street;
 	}
-	public function setStreet($street){
+	public function setStreet($street)
+	{
 		$this->street = $street;
 	}
 
-	public function getCity() {
+	public function getCity()
+	{
 		return $this->city;
 	}
-	public function setCity($city){
+	public function setCity($city)
+	{
 		$this->city = $city;
 	}
 
-	public function getState(){
+	public function getState()
+	{
 		return $this->state;
 	}
-		public function setState($state){
+	public function setState($state)
+	{
 		$this->state = $state;
 	}
 
-	public function getZipCode(){
+	public function getZipCode()
+	{
 		return $this->zipCode;
 	}
-	public function setZipCode(string $zipCode){
+	public function setZipCode(string $zipCode)
+	{
 		$this->zipCode = $zipCode;
 	}
-	
 }

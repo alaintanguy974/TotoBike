@@ -37,7 +37,7 @@ class ProductManagerImpl implements ProductManagerInterface{
     }   
 
     public function updateProduct( $product){
-         $this->ProductDao->updateProduct($product);
+         $this->productDao->updateProduct($product);
     }
 
    public function deleteProductById($id){

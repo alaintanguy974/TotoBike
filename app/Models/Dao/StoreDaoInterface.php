@@ -2,7 +2,8 @@
 
 namespace App\Models\Dao;
 
-interface StoreDaoInterface{
+interface StoreDaoInterface
+{
     public function getAllStores();
     public function getStoreById($id);
 }

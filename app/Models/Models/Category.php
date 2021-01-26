@@ -32,4 +32,5 @@ class Category implements JsonSerializable
 		
 		];
 	}
+	
 }

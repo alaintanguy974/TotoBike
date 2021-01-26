@@ -9,8 +9,7 @@ interface CategoryManagerInterface{
     public function getCategoryById($id);
     public function deleteCategoryById($id);
     public function createCategory(Category $cat);
-    public function updateCategory(Category $cat);
-    
+    public function updateCategory(Category $cat);    
 
 }
 
