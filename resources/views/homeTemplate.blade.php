@@ -1,7 +1,6 @@
 @extends('template')
 
 @section('contenu')
-<link rel="icon" type="image/png" alt="logo Bike Store" href="../../public/img/icons/LogoHaro.png" />
 
 <div class="card-body" style="background-image: url('../img/bg-02.png');">
 
