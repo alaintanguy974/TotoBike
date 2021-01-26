@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Tue Jan 26 2021 15:18:13 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin.blade.php
+* resources/views/homeTemplate.blade.php
+* resources/views/template.blade.php
+
+
+Created files:
+* .autogit/logs/log-26-0-2021-14-49-1.txt
+* resources/views/register.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
