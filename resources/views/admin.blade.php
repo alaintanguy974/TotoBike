@@ -25,7 +25,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-7">
-                                    <h4>Liste des utilisateurs</h4>
+                                    <h4>Liste du personnel</h4>
                                     <table class="table table-sm table-hover">
                                         <thead>
                                             <tr>
@@ -39,43 +39,32 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                           
+                                        foreach($staff as $sta)
                                             <tr>
-                                                <th scope="row">1</th>
-                                                <td>Toto</td>
-                                                <td>Marc</td>
-                                                <td>@.net</td>
-                                                <td>0692</td>
-                                                <td>Santa-Cruz</td>
-                                                <td>Alain</td>
-                                            </tr>
-                                             <tr>
-                                                 <th scope="row">2</th>
-                                                 <td>Coco</td>
-                                                 <td>Yann</td>
-                                                 <td>@twit</td>
-                                                 <td>0262</td>
-                                                 <td>Santa-Cruz</td>
-                                                 <td>Alain</td>
-                                             </tr>
+                                                <th>{{ $sta->getId() }}</th>
+                                                <td>{{ $sta->getNames() }}</td>
+                                                <td>{{ $sta->getName() }}</td>
+                                                <td>{{ $sta->getEmail() }}</td>
+                                                <td>{{ $sta->getPhone() }}</td>
+                                                <td>{{ $sta->getActive() }}</td>
+                                                <td>{{ $sta->getStore()->getName() }}</td>
+                                                <td>{{ $sta->getManager() }}</td>
 
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Jaco</td>
-                                                <td>Tonton</td>
-                                                <td>@.mail</td>
-                                                <td>0262</td>
-                                                <td>Santa-Cruz</td>
-                                                <td>Ray</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">4</th>
-                                                <td colspan="2">Larry</td>
-                                                <td>@twit</td>
-                                                <td>0262</td>
-                                                <td>Santa-Cruz</td>
-                                                <td>Alain</td>
-                                            </tr>
-                                               
+                                                <td class="col -5">
+
+                                                    <a href="{{ url('/staff/'.$p->getId().'/create') }}">
+                                                        <button type="button" class="btn btn-primary mb-1">Ajouter</button>
+                                                    </a>
+
+                                                    <a href="{{ url('/staff/'.$p->getId().'/edit') }}">
+                                                        <button type="button" class="btn btn-secondary mb-1">Modifier</button>
+                                                    </a>
+                                                    <a href="{{ url('/staff/'.$p->getId().'/delete') }}">
+                                                        <button type="button" class="btn btn-danger mb-1">Suprimer</button>
+                                                    </a>
+                                                </td>
+                                            </tr> 
                                         </tbody>
                                     </table>
                                 </div>

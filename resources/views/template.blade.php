@@ -8,12 +8,12 @@
 
         <title>Bike Stores</title>
 
-        
+        <link rel="icon" type="image/jpg" alt="logo Bike Store" href="../../public/img/icons/LogoHaro.jpg" />
 
         <link href="{{asset('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../css/util.css">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
-        <link rel="icon" type="image" alt="logo Bike Store" href="/../../public/img/LogoHaro.jpg" />
+             
         <script src="{{ asset('js/app.js') }}" deffer></script>
         <script src="{{ asset('js/custom.js') }}" deffer></script>
 
