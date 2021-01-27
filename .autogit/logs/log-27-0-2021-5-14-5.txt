@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jan 27 2021 05:14:05 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin.blade.php
+* resources/views/formCategory.blade.php
+
+
+Created files:
+* .autogit/logs/log-26-0-2021-17-49-36.txt
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]
