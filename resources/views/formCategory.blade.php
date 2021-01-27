@@ -1,14 +1,20 @@
+
+
+
 @extends('template')
 
 @section('contenu')
 
 
-<form class="col-md-6" name="categorY" action="{{ !empty($category) ? url('/category/'.$category->getId().'/edit') : url('/category/create')}}" method="post">
-
+<form name="category" action="{{ url('category/create')  }}" method="POST">
     @csrf
     <div class="form">
-        
-        <input name="category" type="text" class="form-control form-control-user" id="category" placeholder="New category" value="{{ !empty($category) ? $category->getName()  : "" }}">
+        <label for="category" class="col-md-3 col-form-label">Nom :</label>
+        <div class="col-md-9">
+            <div class="error">{{ $errors->has("category") ? $errors->first("category") : "" }}
+            </div>
+            <input name="category" type="text" class="form-control form-control-user" id="category" placeholder="New category"value="{{ !empty($category) ? $category->getName()  : "" }}">
+        </div>
 
     </div>
     <br>
@@ -17,3 +23,9 @@
 
 
 @stop
+
+
+
+
+
+

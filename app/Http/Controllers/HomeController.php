@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Exceptions\BrandException;
 use App\Models\Manager\BrandManagerInterface;
 use App\Models\Manager\CategoryManagerInterface;
 use App\Models\Manager\ProductManagerInterface;
