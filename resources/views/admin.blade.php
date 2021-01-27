@@ -104,7 +104,7 @@
                             <!-- ENREGISTREMENT -->
                             <div class="container">
                                 <div class="row">
-                                    <a href="{ register') }">
+                                    <a href="./ register">
                                         <button type="button" class="btn btn-primary mb-1">Enregistre</button>
                                     </a>
 
