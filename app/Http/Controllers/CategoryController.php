@@ -54,7 +54,6 @@ class CategoryController extends Controller{
         return redirect('/category' . $cat->getId() . '/edit');
     }
 
-
     public function delete(CategoryManagerInterface $categoryManager, $id){
         $categoryManager->deleteCategoryById($id);
         return redirect('/');
@@ -64,4 +63,5 @@ class CategoryController extends Controller{
         $category = $categoryManager->getAllCategories();
         return response()->json($category);
     }
+
 }

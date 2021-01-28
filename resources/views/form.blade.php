@@ -10,5 +10,13 @@
      </tbody>
  </table>
 
+ <table class="table table-sm table-hover">
+
+     <tbody>
+         @yield('update')
+     </tbody>
+ </table>
+
+
 @stop
 
