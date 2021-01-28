@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jan 28 2021 05:28:19 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* app/Models/Models/Brand.php
+* resources/views/listeBrands.blade.php
+
+
+Created files:
+* .autogit/logs/log-28-0-2021-4-58-0.txt
+
+
+Deleted files:
+
+
+Renamed files:
