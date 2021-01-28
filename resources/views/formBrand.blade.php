@@ -1,6 +1,6 @@
-@extends('template')
+@extends('form')
 
-@section('contenu')
+@section('create')
 
 <h4>MODIFIER le nom de la marque</h4>
 

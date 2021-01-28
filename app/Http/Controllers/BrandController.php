@@ -17,7 +17,6 @@ class BrandController extends Controller
      */
     public function index(BrandManagerInterface $brandManager){
 
-       //$brandManager = new BrandManagerImpl();
         // recuperer tous les brands        
         // entre ici MODEL de MVC
         $brand = $brandManager->getAllBrands();

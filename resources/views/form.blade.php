@@ -2,15 +2,18 @@
 
 @section('contenu')
 
-<form name="category" action="{{ url('category/create')  }}" method="POST">
-    @csrf
-    <div class="form">
-        <div class="error">{{ $errors->has("category") ? $errors->first("category") : "" }}</div>
-        <input name="category" type="text" class="form-control form-control-user" id="category" placeholder="New category">
-    </div>
-    <br>
-    <button type="submit" class="btn btn-primary btn-user btn-block">Enregistrer</button>
-</form>
+ <h4>Liste des marques</h4>
+ <table class="table table-sm table-hover">
+     <thead>
+         <tr>
+             <th scope="col"></th>
+             
+         </tr>
+     </thead>
+     <tbody>
+         @yield('create')
+     </tbody>
+ </table>
 
 @stop
 

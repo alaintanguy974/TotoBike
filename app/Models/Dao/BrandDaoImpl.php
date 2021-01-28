@@ -2,10 +2,10 @@
 
 namespace App\Models\dao;
 
+use Exception;
+use App\Models\Models\Brand;
 use App\Exceptions\DaoException;
 use App\Models\Dao\BrandDaoInterface;
-use App\Models\Models\Brand;
-use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
