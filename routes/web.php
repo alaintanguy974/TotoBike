@@ -20,7 +20,6 @@ use Illuminate\Support\Facades\Route;
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-//Route::get('/brand', [LoginController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'login']);
@@ -39,7 +38,7 @@ Route::post('/brand/{id}/edit', [BrandController::class, 'update']);
 Route::get('/brand/{id}/delete', [BrandController::class, 'delete']);
 Route::get('/brand/json', [BrandController::class, 'allJson']);
 
-Route::get('/category/create', [CategoryController::class, 'form']);
+Route::get('/category/create', [CategoryController::class, 'formCategory']);
 Route::post('/category/create', [CategoryController::class, 'create']);
 Route::get('/category/{id}/edit', [CategoryController::class, 'formUpdate']);
 Route::post('/category/{id}/edit', [CategoryController::class, 'update']);
@@ -63,6 +62,7 @@ Route::post('/staff/create', [HomeController::class, 'create']);
 Route::get('/staff/{id}/edit', [HomeController::class, 'formUpdate']);
 Route::post('/staff/{id}/edit', [HomeController::class, 'update']);
 Route::get('/staff/{id}/delete', [HomeController::class, 'delete']);
+
 
 //Auth::routes();
 
