@@ -7,7 +7,7 @@ use JsonSerializable;
 class Brand implements JsonSerializable{
 
 	private $id;
-	private string $name;
+	private $name;
 
 	public function getId(){
 		return $this->id;
@@ -17,11 +17,11 @@ class Brand implements JsonSerializable{
 		$this->id = $id;
 	}
 
-	public function getName() : string{
+	public function getName(){
 		return $this->name;
 	}
 	
-	public function setName(string $name){
+	public function setName( $name){
 		$this->name = $name;
 	}
 

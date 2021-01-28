@@ -2,7 +2,7 @@
 
 @section('contenu')
      <ul>
-        @foreach($brands as $b)
+        @foreach($brand as $b)
             <li>
                 {{ $b->getName() }}
             </li>

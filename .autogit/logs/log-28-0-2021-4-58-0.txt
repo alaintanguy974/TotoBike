@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jan 28 2021 04:58:00 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/BrandController.php
+* app/Http/Controllers/CategoryController.php
+* resources/views/formBrand.blade.php
+* resources/views/formCategory.blade.php
+* resources/views/formCategory1.blade.php
+
+
+Created files:
+* .autogit/logs/log-27-0-2021-7-13-47.txt
+* public/sass/_variables.scss
+* public/sass/app.scss
+* resources/sass/_variables.scss
+* resources/sass/app.scss
+
+
+Deleted files:
+* resources/views/register.blade.php
+
+
+Renamed files:
