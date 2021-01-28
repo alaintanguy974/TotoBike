@@ -34,6 +34,6 @@ class HomeController extends Controller{
                 "store" => $allStores,
                 "staff" => $allStaffs,
             ]);
-    }
+        }
 
 }
