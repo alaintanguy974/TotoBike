@@ -9,7 +9,7 @@
     <div class="form-group row, form-brand">
        
         <div class="col-md-9">
-            <input name="brand" type="text" class="form-control form-control-user" id="brand" placeholder="New brand" value="{{ !empty($brand) ? $brand->getName() : String : "" }}">
+            <input name="brand" type="text" class="form-control form-control-user" id="brand" placeholder="New brand" value="{{ !empty($brand) ? $brand->getName() : "" }}">
         </div>
     </div>
     <div class="form-group row">

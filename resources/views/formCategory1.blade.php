@@ -1,3 +1,6 @@
+@extends('template')
+
+
 @section('contenu')
 
 <h4>MODIFIER le nom de la catégorie</h4>

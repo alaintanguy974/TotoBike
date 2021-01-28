@@ -37,17 +37,17 @@ class BrandController extends Controller
         ]);
     }
 
-       /*public function create(BrandRequest $request, BrandManagerInterface $brandManager){
+       public function create(BrandRequest $request, BrandManagerInterface $brandManager){
         $brand = $request->input('brand');
         
         $brand = new Brand();
-        $brand->setName($brand);
+        $brand->setName ($brand);
 
         $brandManager->createBrand($brand);
         return view('formBrand')->with(["brand"=> $brand]);       
         return redirect('/brand'. $brand->getName() .'/create');
 
-    }*/
+    }
 
     public function update(BrandRequest $request, BrandManagerInterface $brandManager, $id){
         $brand = new Brand();

@@ -34,10 +34,10 @@ class CategoryController extends Controller{
 
     public function create(CategoryRequest $request, CategoryManagerInterface $categoryManager){
         $cat = $request->input('category');
-        
+
         $cat = new Category();
         $cat->setName($cat);
-
+        
         $categoryManager->createCategory($cat);
         return view('formCategory')->with(["category"=> $cat]);
        // return view('test')->with(["catval"=> $cat]);
@@ -49,9 +49,7 @@ class CategoryController extends Controller{
         $cat = new Category();
         $cat->setId($id);
         $cat->setName($request->input("category"));
-
         $categoryManager->updateCategory($cat);
-
         //return view('test')->with(["catval"=> $cat]);
         return redirect('/category' . $cat->getId() . '/edit');
     }

@@ -5,24 +5,18 @@
 
 @section('contenu')
 
-
-<form name="category" action="{{ url('category/create')  }}" method="POST">
+<h4>CREATION d'une nouvelle catégorie</h4>
+<form name="category" action="{{ !empty($category) ? url('/category/'.$category->getId().'/edit') : url('/category/create')}}" method="post">
     @csrf
-    <div class="form">
-        <label for="category" class="col-md-2 col-form-label">Nom :</label>
-        <div class="col-md-3">
-            <div class="error">{{ $errors->has("category") ? $errors->first("category") : "" }}
-            </div>
-            <input name="category" type="text" class="form-control form-control-user" id="category" placeholder="New category"value="{{ !empty($category) ? $category->getName()  : "" }}">
-        </div>
-
+    <div class="form-category">
+        <input name="category" type="text" class="form-control form-control-user" id="category" placeholder="New categorie" value="{{ !empty($category) ? $category->getName()  : "" }}">
     </div>
     <br>
-    <button type="submit" class="btn btn-primary btn-user btn-block">Enregistrer</button>
+    <input class="btn btn-primary btn-user btn-block" type="submit" value="submit">
 </form>
 
-
 @stop
+
 
 
 
