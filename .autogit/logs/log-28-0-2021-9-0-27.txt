@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jan 28 2021 09:00:27 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/BrandController.php
+* app/Models/Dao/BrandDaoImpl.php
+* resources/views/form.blade.php
+* resources/views/formBrand.blade.php
+
+
+Created files:
+* .autogit/logs/log-28-0-2021-8-30-9.txt
+
+
+Deleted files:
+
+
+Renamed files:
