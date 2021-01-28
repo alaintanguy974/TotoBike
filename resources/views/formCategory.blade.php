@@ -1,7 +1,7 @@
 
 
 
-@extends('template')
+@extends('form')
 
 @section('contenu')
 
