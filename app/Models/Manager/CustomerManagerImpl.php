@@ -10,7 +10,7 @@ use App\Models\Models\Customer;
 class CustomerManagerImpl implements CustomerManagerInterface
 {
 
-    private $brandDao;
+    private $customerDao;
 
     public function __construct(CustomerDaoInterface $customerDao){
         $this->CustomerDao = $customerDao;

@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jan 29 2021 09:31:25 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* app/Models/Dao/ProductDaoImpl.php
+* app/Models/Manager/CustomerManagerImpl.php
+* app/Models/Manager/CustomerManagerInterface.php
+* app/Models/Manager/StaffManagerImpl.php
+* app/Models/Models/Customer.php
+* app/Models/Models/Store.php
+
+
+Created files:
+* .autogit/logs/log-29-0-2021-7-33-28.txt
+
+
+Deleted files:
+
+
+Renamed files:

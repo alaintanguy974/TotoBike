@@ -6,6 +6,7 @@ namespace App\Models\Models;
 
 class Customer {
     private $id;
+    private $names;
     private $name;
     private $phone;
     private $email;
