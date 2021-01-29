@@ -19,8 +19,8 @@ class CustomerDaoImpl implements CustomerDaoInterface{
         
         $customer->setId($resultbdd['customer_id']);
         $customer->setNames($resultbdd['first_name']);
-        $customer->setNames($resultbdd['last_name']);
-        $customer->setPhone(['phone']);
+        $customer->setName($resultbdd['last_name']);
+        $customer->setPhone($resultbdd['phone']);
         $customer->setEmail ($resultbdd['email']);
         $customer->setStreet($resultbdd['street']);
         $customer->setCity($resultbdd['city']);
@@ -33,7 +33,7 @@ class CustomerDaoImpl implements CustomerDaoInterface{
 
     public function getAllCustomers()
     {
-        $resultbdd = DB::select("SELECT * FROM sales.customer");
+        $resultbdd = DB::select("SELECT * FROM sales.customers");
 
         $allCustomers = [];
         foreach ($resultbdd as $i => $row) {

@@ -2,10 +2,13 @@
 
 namespace App\Models\Dao;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class CustomerDaoInterface extends Model
+
+class CustomerDaoInterface 
 {
-    use HasFactory;
+    public function getAllCustomers();
+    public function getCustomerById($id);
+    //public function deleteCustomerById($id);
+    public function createCustomer(Customer $customer);
+    public function updateCustomer(Customer $customer);
 }

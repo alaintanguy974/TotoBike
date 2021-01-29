@@ -13,7 +13,7 @@ class CustomerManagerImpl implements CustomerManagerInterface
     private $customerDao;
 
     public function __construct(CustomerDaoInterface $customerDao){
-        $this->CustomerDao = $customerDao;
+        $this->customerDao = $customerDao;
     }
 
     public function getAllCustomers(){
@@ -32,8 +32,8 @@ class CustomerManagerImpl implements CustomerManagerInterface
         $this->customerDao->updateCustomer( $customer);
     }
 
-    public function deleteCustomerById($id){
+   /* public function deleteCustomerById($id){
         $this->customerManagerInterface->countCustomerWithCustomerId($id) == [0]; 
         $this->customerDao->deleteCustomerById($id);
-    }    
+    } */   
 }
