@@ -8,6 +8,7 @@ use App\Models\Manager\ProductManagerInterface;
 use App\Models\Manager\StockManagerInterface;
 use App\Models\Manager\StoreManagerInterface;
 use App\Models\Manager\StaffManagerInterface;
+use App\Models\Manager\CustomerManagerInterface;
 class HomeController extends Controller{
 
     public function index(
@@ -16,7 +17,8 @@ class HomeController extends Controller{
         StockManagerInterface $stockManager, 
         CategoryManagerInterface $categoryManager,
         StoreManagerInterface $storeManager,
-        StaffManagerInterface $staffManager){
+        StaffManagerInterface $staffManager,
+        CustomerManagerInterface $customerManager){
 
        
             $allBrands = $brandManager->getAllBrands();
@@ -25,6 +27,7 @@ class HomeController extends Controller{
             $allCategories = $categoryManager->getAllCategories();
             $allStores =  $storeManager->getAllStores();
             $allStaffs =  $staffManager->getAllStaffs();
+            $allCustomers =  $customerManager->getAllCustomers();
 
             return view('home')->with([
                 "brand" => $allBrands,
@@ -33,6 +36,7 @@ class HomeController extends Controller{
                 "category" => $allCategories,
                 "store" => $allStores,
                 "staff" => $allStaffs,
+                "customer" => $allCustomers,
             ]);
         }
 

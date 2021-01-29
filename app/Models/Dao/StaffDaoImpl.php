@@ -48,7 +48,6 @@ class StaffDaoImpl implements StaffDaoInterface{
         $reponse = $bdd->query("SELECT * FROM sales.staffs WHERE staff_id = '" . $id . "'");
         $resultbdd = $reponse->fetch();
 
-
         $staff = new Staff();
         $staff->setId($resultbdd['staff_id']);
         $staff->setNames($resultbdd['first_name']);

@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jan 29 2021 14:14:26 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* app/Models/Dao/CustomerDaoImpl.php
+* app/Models/Dao/StaffDaoImpl.php
+* resources/views/home.blade.php
+
+
+Created files:
+* .autogit/logs/log-29-0-2021-11-2-15.txt
+
+
+Deleted files:
+
+
+Renamed files:

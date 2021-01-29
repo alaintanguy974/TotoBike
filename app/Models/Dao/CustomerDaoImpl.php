@@ -31,8 +31,7 @@ class CustomerDaoImpl implements CustomerDaoInterface{
     }
 
 
-    public function getAllCustomers()
-    {
+    public function getAllCustomers()    {
         $resultbdd = DB::select("SELECT * FROM sales.customers");
 
         $allCustomers = [];
