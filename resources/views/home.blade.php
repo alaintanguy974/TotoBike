@@ -6,7 +6,7 @@
     <th>{{ $b->getId() }}</th>
     <td>{{ $b->getName() }}</td>
     <td>
-        <a href="{{ url('/brand/'.$b->getId().'/create') }}">
+        <a href="{{ url('/brand/create') }}">
             <button type="button" class="btn btn-primary mb-1">Ajouter</button>
         </a>
         <a href="{{ url('/brand/'.$b->getId().'/edit') }}">
