@@ -8,13 +8,24 @@ use App\Models\Models\Customer;
 use Illuminate\Support\Facades\DB;
 
 class CustomerDaoImpl implements CustomerDaoInterface{
-    public function getCustomerById($id)
-    {
-        $resultbdd = DB::select("select * from sales.customers where customer_id=?", [$id]);
+
+    public function getCustomerById($id){
+       
+        $bdd = DB::getPdo();
+        $reponse = $bdd->query("SELECT * FROM sales.customers WHERE customer_id = '" . $id . "'");
+        $resultbdd = $reponse->fetch();
 
         $customer = new Customer();
-        $customer->setId($resultbdd[0]->customer_id);
-        $customer->setName($resultbdd[0]->customer_name);
+        
+        $customer->setId($resultbdd['customer_id']);
+        $customer->setNames($resultbdd['first_name']);
+        $customer->setNames($resultbdd['last_name']);
+        $customer->setPhone(['phone']);
+        $customer->setEmail ($resultbdd['email']);
+        $customer->setStreet($resultbdd['street']);
+        $customer->setCity($resultbdd['city']);
+        $customer->setState($resultbdd['state']);
+        $customer->setZipCode($resultbdd['zip_code']);
 
         return $customer;
     }
@@ -22,13 +33,14 @@ class CustomerDaoImpl implements CustomerDaoInterface{
 
     public function getAllCustomers()
     {
-        $resultbdd = DB::select("exec get_all_customers");
+        $resultbdd = DB::select("SELECT * FROM sales.customer");
 
         $allCustomers = [];
         foreach ($resultbdd as $i => $row) {
             $customer = new Customer();
-            $customer->setId($row->store_id);
-            $customer->setName($row->store_name);
+            $customer->setId($row->customer_id);
+            $customer->setNames($row->first_name);
+            $customer->setName($row->last_name);
             $customer->setPhone($row->phone);
             $customer->setEmail($row->email);
             $customer->setStreet($row->street);
