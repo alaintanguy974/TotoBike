@@ -9,28 +9,6 @@ use Illuminate\Support\Facades\DB;
 
 class CustomerDaoImpl implements CustomerDaoInterface{
 
-    public function getCustomerById($id){
-       
-        $bdd = DB::getPdo();
-        $reponse = $bdd->query("SELECT * FROM sales.customers WHERE customer_id = '" . $id . "'");
-        $resultbdd = $reponse->fetch();
-
-        $customer = new Customer();
-        
-        $customer->setId($resultbdd['customer_id']);
-        $customer->setNames($resultbdd['first_name']);
-        $customer->setName($resultbdd['last_name']);
-        $customer->setPhone($resultbdd['phone']);
-        $customer->setEmail ($resultbdd['email']);
-        $customer->setStreet($resultbdd['street']);
-        $customer->setCity($resultbdd['city']);
-        $customer->setState($resultbdd['state']);
-        $customer->setZipCode($resultbdd['zip_code']);
-
-        return $customer;
-    }
-
-
     public function getAllCustomers()    {
         $resultbdd = DB::select("SELECT * FROM sales.customers");
 
@@ -53,20 +31,41 @@ class CustomerDaoImpl implements CustomerDaoInterface{
         return $allCustomers;
     }
 
+    public function getCustomerById($id){
+       
+        $bdd = DB::getPdo();
+        $reponse = $bdd->query("SELECT * FROM sales.customers WHERE customer_id = '" . $id . "'");
+        $resultbdd = $reponse->fetch();
+
+        $customer = new Customer();        
+        $customer->setId($resultbdd['customer_id']);
+        $customer->setNames($resultbdd['first_name']);
+        $customer->setName($resultbdd['last_name']);
+        $customer->setPhone($resultbdd['phone']);
+        $customer->setEmail ($resultbdd['email']);
+        $customer->setStreet($resultbdd['street']);
+        $customer->setCity($resultbdd['city']);
+        $customer->setState($resultbdd['state']);
+        $customer->setZipCode($resultbdd['zip_code']);
+
+        return $customer;
+    }
+
+
+    
+
     public function createCustomer(Customer $customer)
     {
-        $resultbdd = DB::insert("INSERT INTO sales.customers (first_name, last_name, phone, email, street, city, state, zip_code) values(?,?,?,?,?,?,?,?", 
+        $resultbdd = DB::insert("INSERT INTO sales.customers (first_name, last_name, phone, email, street, city, state, zip_code) values(?,?,?,?,?,?,?,?)", 
         [$customer->getNames(), $customer->getName(), $customer->getPhone(), $customer->getEmail(),  $customer->getStreet(), $customer->getCity(), $customer->getState(), $customer->getZipCode()]);
     }
 
-    public function updateProduct(Customer $customer)
-    {
+    public function updateCustomer(Customer $customer){
         $resultbdd = DB::update("UPDATE sales.customers set first_name, last_name, phone, email, street, city, state, zip_code = (?,?,?,?,?,?,?,?)
          WHERE customer_id = ?", [$customer->getNames(), $customer->getName(), $customer->getPhone(), $customer->getEmail(),  $customer->getStreet(), $customer->getCity(), $customer->getState(), $customer->getId()]);
     }
 
-    public function deleteCustomerById($id)
-    {
+    public function deleteCustomerById($id){
         $resultbdd = DB::delete("DELETE FROM sales.customers WHERE customer_id = ?", [$id]);
     }
     

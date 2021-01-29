@@ -130,13 +130,13 @@
 
 
     <td class="col -5">
-        <a href="{{ url('/customer/'.$cli->getId().'/create') }}">
+        <a href="{{ url('/customer/'.$cl->getId().'/create') }}">
             <button type="button" class="btn btn-primary mb-1">Ajouter</button>
         </a>
-        <a href="{{ url('/customer/'.$cli->getId().'/edit') }}">
+        <a href="{{ url('/customer/'.$cl->getId().'/edit') }}">
             <button type="button" class="btn btn-secondary mb-1">Modifier</button>
         </a>
-        <a href="{{ url('/customer/'.$cli->getId().'/delete') }}">
+        <a href="{{ url('/customer/'.$cl->getId().'/delete') }}">
             <button type="button" class="btn btn-danger mb-1">Suprimer</button>
         </a>
     </td>

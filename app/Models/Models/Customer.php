@@ -2,9 +2,9 @@
 
 namespace App\Models\Models;
 
+use JsonSerializable;
 
-
-class Customer {
+class Customer implements JsonSerializable{
     private $id;
     private $names;
     private $name;
@@ -78,5 +78,23 @@ class Customer {
     public function setZipCode(string $zipCode){
         $this->zipCode = $zipCode;
     }
+
+    public function jsonSerialize()
+    {
+        return [
+           "id" => $this->id,
+           "first_name" => $this->names,
+           "last_name" => $this->name,
+           "list_price" =>  $this->price,
+           "phone"=> $this->phone,
+           "email"=> $this->email,
+           "street" => $this->street,
+           "city" => $this->city,
+           "state" => $this->state,
+           "zip_code"=> $this->zipCode
+       
+        ];
+    }
+
 }
 
