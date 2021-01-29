@@ -31,7 +31,7 @@ class StaffDaoImpl implements StaffDaoInterface{
             $staff->setPhone($row->phone);
             $staff->setActive($row->active);
             $staff->setManager($row->manager_id);
-            $staff->setPassword($row->pass);
+            $staff->setPassword($row->password);
 
             $store = $this->storeDao->getStoreById($row->store_id);
             $staff->setstore($store);
@@ -57,7 +57,7 @@ class StaffDaoImpl implements StaffDaoInterface{
         $staff->setPhone($resultbdd['phone']);
         $staff->setActive($resultbdd['active']);
         $staff->setManager($resultbdd['manager_id']);
-        $staff->setPassword($resultbdd['pass']);
+        $staff->setPassword($resultbdd['password']);
 
         $store = $this->storeDao->getStoreById($resultbdd['store_id']);
         $staff->setstore($store);
@@ -71,14 +71,14 @@ class StaffDaoImpl implements StaffDaoInterface{
 
     public function createStaff(Staff $staff){
         $resultbdd = DB::insert(
-            "INSERT INTO sales.staffs (first_name, last_name, email, phone, active, manager_id, pass ) values(?,?,?,?,?,?,?)",
+            "INSERT INTO sales.staffs (first_name, last_name, email, phone, active, manager_id, password ) values(?,?,?,?,?,?,?)",
             [$staff->getNames(), $staff->getName(), $staff->getEmail(), $staff->getPhone(), $staff->getActive(), $staff->getManager(), $staff->getPassword()]
         );
     }
 
     public function updateStaff(Staff $staff)
     {
-        $resultbdd = DB::update("UPDATE sales.staffs set first_name, last_name, email, phone, active, manager_id, pass = (?,?,?,?,?,?,?)
+        $resultbdd = DB::update("UPDATE sales.staffs set first_name, last_name, email, phone, active, manager_id, password = (?,?,?,?,?,?,?)
          WHERE staff_id = ?", [$staff->getNames(), $staff->getName(), $staff->getEmail(), $staff->getPhone(), $staff->getActive(), $staff->getManager(), $staff->getPassword(), $allStaffs->getId()]);
     }
 

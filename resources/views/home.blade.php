@@ -118,17 +118,17 @@
 @stop
 
 @section('liste_des_clients')
-@foreach($customer as $c)
+@foreach($customer as $client)
 <tr>
-    <th>{{ $c->getId() }}</th>
-    <td>{{ $c->getNames() }}</td>
-    <td>{{ $c->getName() }}</td>
-    <td>{{ $c->getPhone() }}</td>
-    <td>{{ $c->getEmail() }}</td>    
-    <td>{{ $c->getStreet() }}</td>
-    <td>{{ $c->getCity() }}</td>
-    <td>{{ $c->getState() }}</td>
-    <td>{{ $c->getZipCode() }}</td>
+    <th>{{ $client->getId() }}</th>
+    <td>{{ $client->getNames() }}</td>
+    <td>{{ $client>getName() }}</td>
+    <td>{{ $client->getPhone() }}</td>
+    <td>{{ $client->getEmail() }}</td>
+    <td>{{ $client->getStreet() }}</td>
+    <td>{{ $client->getCity() }}</td>
+    <td>{{ $client->getState() }}</td>
+    <td>{{ $client->getZipCode() }}</td>
 
 
     <td class="col -5">

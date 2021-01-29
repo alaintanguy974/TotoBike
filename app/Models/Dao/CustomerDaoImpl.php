@@ -53,5 +53,22 @@ class CustomerDaoImpl implements CustomerDaoInterface{
 
         return $allCustomers;
     }
+
+    public function createCustomer(Customer $customer)
+    {
+        $resultbdd = DB::insert("INSERT INTO sales.customers (first_name, last_name, phone, email, street, city, state, zip_code) values(?,?,?,?,?,?,?,?", 
+        [$customer->getNames(), $customer->getName(), $customer->getPhone(), $customer->getEmail(),  $customer->getStreet(), $customer->getCity(), $customer->getState(), $customer->getZipCode()]);
+    }
+
+    public function updateProduct(Customer $customer)
+    {
+        $resultbdd = DB::update("UPDATE sales.customers set first_name, last_name, phone, email, street, city, state, zip_code = (?,?,?,?,?,?,?,?)
+         WHERE customer_id = ?", [$customer->getNames(), $customer->getName(), $customer->getPhone(), $customer->getEmail(),  $customer->getStreet(), $customer->getCity(), $customer->getState(), $customer->getId()]);
+    }
+
+    public function deleteCustomerById($id)
+    {
+        $resultbdd = DB::delete("DELETE FROM sales.customers WHERE customer_id = ?", [$id]);
+    }
     
 }
