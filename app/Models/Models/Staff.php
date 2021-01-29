@@ -92,8 +92,8 @@ class Staff implements JsonSerializable{
 	public function jsonSerialize(){
 		return [
 			"id" => $this->id,
-			"first_name" => $this->name,
-			"last_name" => $this->names,
+			"first_name" => $this->names,
+			"last_name" => $this->name,
 			"email" =>  $this->email,
 			"phone" =>  $this->phone,
 			"active" =>  $this->active,

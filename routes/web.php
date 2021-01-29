@@ -38,7 +38,7 @@ Route::post('/brand/{id}/edit', [BrandController::class, 'update']);
 Route::get('/brand/{id}/delete', [BrandController::class, 'delete']);
 Route::get('/brand/json', [BrandController::class, 'allJson']);
 
-Route::get('/category/create', [CategoryController::class, 'formCategory']);
+Route::get('/category/create', [CategoryController::class, 'form']);
 Route::post('/category/create', [CategoryController::class, 'create']);
 Route::get('/category/{id}/edit', [CategoryController::class, 'formUpdate']);
 Route::post('/category/{id}/edit', [CategoryController::class, 'update']);
@@ -62,6 +62,12 @@ Route::post('/staff/create', [HomeController::class, 'create']);
 Route::get('/staff/{id}/edit', [HomeController::class, 'formUpdate']);
 Route::post('/staff/{id}/edit', [HomeController::class, 'update']);
 Route::get('/staff/{id}/delete', [HomeController::class, 'delete']);
+
+Route::get('/customer/create', [HomeController::class, 'form']);
+Route::post('/customer/create', [HomeController::class, 'create']);
+Route::get('/customer/{id}/edit', [HomeController::class, 'formUpdate']);
+Route::post('/customer/{id}/edit', [HomeController::class, 'update']);
+Route::get('/customer/{id}/delete', [HomeController::class, 'delete']);
 
 
 //Auth::routes();

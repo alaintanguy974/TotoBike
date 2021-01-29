@@ -196,7 +196,7 @@
                                             <!-- CATEGORIE -->
                                             <div class="container">
                                                 <div class="row">
-                                                    <div class="col-xl-6">
+                                                    <div class="col-xl-12">
                                                         <h4>Liste des catégories</h4>
                                                         <table class="table table-sm table-hover">
                                                             <thead>
@@ -209,8 +209,7 @@
                                                                 @yield('liste_des_categories')
                                                             </tbody>
                                                         </table>
-                                                    </div>
-                                                    
+                                                    </div>                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -219,7 +218,7 @@
                                             <!-- PRODUITS -->
                                             <div class="container">
                                                 <div class="row">
-                                                    <div class="col-xl-6">
+                                                    <div class="col-xl-12">
                                                         <h4>Liste des produits</h4>
                                                         <table class="table table-sm table-hover">
                                                             <thead>
@@ -267,13 +266,34 @@
                                             </div>
                                         </div>
 
-                                        <div class="tab-pane fade" id="client" role="tabpanel">
-                                        <!-- CLIENTS -->
+                                        <div class="tab-pane fade" id="client">
+                                            <!-- PRODUITS -->
                                             <div class="container">
                                                 <div class="row">
+                                                    <div class="col-xl-12">
+                                                        <h4>Liste des clients</h4>
+                                                        <table class="table table-sm table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col"></th>
+                                                                    <th scope="col">Nom</th>
+                                                                    <th scope="col">prénom</th>
+                                                                    <th scope="col">Téléphone</th>
+                                                                    <th scope="col">Email</th>
+                                                                    <th scope="col">Rue</th>
+                                                                    <th scope="col">Ville</th>
+                                                                    <th scope="col">Pay</th>
+                                                                    <th scope="col">CodePostal</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @yield('liste_des_clients')
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+
 
                                         <div class="tab-pane fade" id="vente">
                                         <!-- VENTES -->

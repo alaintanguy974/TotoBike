@@ -117,4 +117,40 @@
 
 @stop
 
+@section('liste_des_clients')
+@foreach($customer as $cta)
+<tr>
+    <th>{{ $c->getId() }}</th>
+    <td>{{ $c->getNames() }}</td>
+    <td>{{ $c->getName() }}</td>
+    <td>{{ $c->getPhone() }}</td>
+    <td>{{ $c->getEmail() }}</td>    
+    <td>{{ $c->getActive() }}</td>
+    <td>{{ $c->getStreet()     }}</td>
+    <td>{{ $c->getCity() }}</td>
+    <td>{{ $c->getState() }}</td>
+    <td>{{ $c->getZipCode() }}</td>
+
+
+    <td class="col -5">
+
+        <a href="{{ url('/customer/'.$p->getId().'/create') }}">
+            <button type="button" class="btn btn-primary mb-1">Ajouter</button>
+        </a>
+
+        <a href="{{ url('/customer/'.$p->getId().'/edit') }}">
+            <button type="button" class="btn btn-secondary mb-1">Modifier</button>
+        </a>
+        <a href="{{ url('/customer/'.$p->getId().'/delete') }}">
+            <button type="button" class="btn btn-danger mb-1">Suprimer</button>
+        </a>
+    </td>
+
+</tr>
+@endforeach
+@stop
+
+
+
+
 

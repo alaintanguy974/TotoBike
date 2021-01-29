@@ -17,6 +17,8 @@ use App\Models\Dao\StaffDaoImpl;
 use App\Models\Dao\StaffDaoInterface;
 use App\Models\Dao\StoreDaoImpl;
 use App\Models\Dao\StoreDaoInterface;
+use App\Models\Dao\CustomerDaoImpl;
+use App\Models\Dao\CustomerDaoInterface;
 use App\Models\Manager\BrandManagerImpl;
 use App\Models\Manager\BrandManagerInterface;
 use App\Models\Manager\CategoryManagerImpl;
@@ -31,11 +33,14 @@ use App\Models\Manager\StaffManagerImpl;
 use App\Models\Manager\StaffManagerInterface;
 use App\Models\Manager\StoreManagerImpl;
 use App\Models\Manager\StoreManagerInterface;
+use App\Models\Manager\CustomerManagerImpl;
+use App\Models\Manager\CustomerManagerInterface;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Dao\LoginDaoImpl;
 use App\Models\Manager\ComplexRequestManagerImpl;
 use App\Models\Manager\ComplexRequestManagerInterface;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -44,8 +49,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
-    {
+    public function register()    {
         $this->app->bind(BrandManagerInterface::class, BrandManagerImpl::class);
         $this->app->bind(BrandDaoInterface::class, BrandDaoImpl::class);
         $this->app->bind(CategoryDaoInterface::class, CategoryDaoImpl::class);
@@ -62,6 +66,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(StoreManagerInterface::class, StoreManagerImpl::class);
         $this->app->bind(ComplexRequestDaoInterface::class, ComplexRequestDaoImpl::class);
         $this->app->bind(ComplexRequestManagerInterface::class, ComplexRequestManagerImpl::class);
+        $this->app->bind(CustomerDaoInterface::class, CustomerDaoImpl::class);
+        $this->app->bind(CustomerManagerInterface::class, CustomerManagerImpl::class);
 
     }
 

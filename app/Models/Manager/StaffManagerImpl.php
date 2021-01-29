@@ -21,7 +21,7 @@ class StaffManagerImpl implements StaffManagerInterface{
         return $this->staffDao->getStaffById($id);
     }
     public function countStaffWithStoreId($id)    {
-        return $this->staffDao->countStafftWithStroredId($id);
+        return $this->storeDao->countProductWithStroredId($id);
     }
 
     public function createStaff($staff){
