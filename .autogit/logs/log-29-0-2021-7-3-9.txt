@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jan 29 2021 07:03:09 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* app/Models/Dao/StaffDaoImpl.php
+* app/Models/Manager/StaffManagerImpl.php
+* app/Models/Models/Staff.php
+
+
+Created files:
+* .autogit/logs/log-29-0-2021-6-32-51.txt
+
+
+Deleted files:
+
+
+Renamed files:

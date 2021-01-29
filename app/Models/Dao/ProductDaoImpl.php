@@ -13,8 +13,7 @@ class ProductDaoImpl implements ProductDaoInterface{
     private $categoryDao;
     private $brandDao;
 
-    public function __construct(CategoryDaoInterface $catDao, BrandDaoInterface $brandDao)
-    {
+    public function __construct(CategoryDaoInterface $catDao, BrandDaoInterface $brandDao){
         $this->categoryDao = $catDao;
         $this->brandDao = $brandDao;
     }
