@@ -2,10 +2,13 @@
 
 namespace App\Models\Manager;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class CustomerManagerInterface extends Model
-{
-    use HasFactory;
+
+class CustomerManagerInterface{
+
+    public function getAllCustomer();
+    public function getCustomerById($id);    
+    public function deleteCustomerById($id);
+    public function createCustomer(Customer $customer);
+    public function updateCustomer(Customer $customer);
 }

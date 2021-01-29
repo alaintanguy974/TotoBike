@@ -4,7 +4,7 @@ namespace App\Models\Models;
 class Store{
 
 	private $id;
-	private string $name;
+	private $name;
 	private $phone;
 	private $email;
 	private $street;
