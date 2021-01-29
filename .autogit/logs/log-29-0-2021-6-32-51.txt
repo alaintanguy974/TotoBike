@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jan 29 2021 06:32:51 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* app/Models/Manager/StaffManagerImpl.php
+
+
+Created files:
+* .autogit/logs/log-29-0-2021-6-2-32.txt
+
+
+Deleted files:
+
+
+Renamed files:

@@ -17,8 +17,7 @@ class StaffDaoImpl implements StaffDaoInterface{
         $this->storeDao = $storeDao;
     }
 
-    public function getAllStaffs()
-    {
+    public function getAllStaffs(){
 
         $resultbdd = DB::select("SELECT * FROM sales.staffs");
 
@@ -32,7 +31,7 @@ class StaffDaoImpl implements StaffDaoInterface{
             $staff->setPhone($row->phone);
             $staff->setActive($row->active);
             $staff->setManager($row->manager_id);
-            $staff->setPassword($row->password);
+            $staff->setPassword($row->pass);
 
             $store = $this->storeDao->getStoreById($row->store_id);
             $staff->setstore($store);
@@ -58,7 +57,7 @@ class StaffDaoImpl implements StaffDaoInterface{
         $staff->setPhone($resultbdd['phone']);
         $staff->setActive($resultbdd['active']);
         $staff->setManager($resultbdd['manager_id']);
-        $staff->setPassword($resultbdd['password']);
+        $staff->setPassword($resultbdd['pass']);
 
         $store = $this->storeDao->getStoreById($resultbdd['store_id']);
         $staff->setstore($store);
@@ -66,13 +65,11 @@ class StaffDaoImpl implements StaffDaoInterface{
         return $staff;
     }
 
-    public function countStaffWithStoreId($id)
-    {
-        return DB::select("select count(*) as count from sales.staffs where staff_id=" . $id)[0]->count;
+    public function countStaffWithStoreId($id){
+        return DB::select("select count(*) as count from sales.staffs where store_id=" . $id)[0]->count;
     }
 
-    public function createStaff(Staff $staff)
-    {
+    public function createStaff(Staff $staff){
         $resultbdd = DB::insert(
             "INSERT INTO sales.staffs (first_name, last_name, email, phone, active, manager_id, pass ) values(?,?,?,?,?,?,?)",
             [$staff->getNames(), $staff->getName(), $staff->getEmail(), $staff->getPhone(), $staff->getActive(), $staff->getManager(), $staff->getPassword()]

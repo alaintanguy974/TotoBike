@@ -98,7 +98,7 @@ class Staff implements JsonSerializable{
 			"phone" =>  $this->phone,
 			"active" =>  $this->active,
 			"manager_id" =>  $this->manager,
-			"password" =>  $this->password,
+			"pass" =>  $this->password,
 		];
 	}
 }

@@ -20,8 +20,8 @@ class StaffManagerImpl implements StaffManagerInterface{
     public function getStaffById($id){
         return $this->staffDao->getStaffById($id);
     }
-    public function countStaffWithStoreId($id)    {
-        return $this->staffDao->counttafftWithStroredId($id);
+    public function countStaffWithStoreId($id){
+        return $this->staffDao->countStaffWithStroredId($id);
     }
 
     public function createStaff($staff){
