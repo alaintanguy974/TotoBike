@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jan 29 2021 17:54:56 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* resources/views/formBrand.blade.php
+* resources/views/home.blade.php
+
+
+Created files:
+* .autogit/logs/log-29-0-2021-17-24-38.txt
+
+
+Deleted files:
+
+
+Renamed files:

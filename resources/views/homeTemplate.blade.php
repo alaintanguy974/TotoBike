@@ -310,7 +310,7 @@
                     </div>
                 </div>
             </div>
-
+        </div>
             <!--FENETRE  REPORTING   ----------------------------------------------------------------->
             <div class="tab-pane fade" id="reporting" role="tabpanel" style="background-color: white;">
 

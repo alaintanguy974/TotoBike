@@ -44,7 +44,7 @@
                                         </thead>
                                         <tbody>
                                            
-                                        foreach($staff as $sta)
+                                        @foreach($staff as $sta)
                                             <tr>
                                                 <th>{{ $sta->getId() }}</th>
                                                 <td>{{ $sta->getNames() }}</td>
@@ -68,7 +68,10 @@
                                                         <button type="button" class="btn btn-danger mb-1">Suprimer</button>
                                                     </a>
                                                 </td>
-                                            </tr> 
+                                            </tr>
+                                        @endforeach
+
+
                                         </tbody>
                                     </table>
                                 </div>

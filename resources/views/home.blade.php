@@ -28,7 +28,7 @@
     <th>{{ $cat->getId() }}</th>
     <td>{{ $cat->getName() }}</td>
     <td>
-        <a href="{{ url('/category/'.$cat->getId().'/create') }}">
+        <a href="{{ url('/category/create') }}">
             <button type="button" class="btn btn-primary mb-1">Ajouter</button>
         </a>
 
