@@ -30,9 +30,9 @@
                                     <ul class="nav nav-tabs mb-8">
                                         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#marque">Marque</a>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#categorie">Catégorie</a>
+                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#category">Catégorie</a>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#produits">Produits</a>
+                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product">Produits</a>
                                         </li>
                                         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#stock">Stock</a>
                                         </li>
@@ -61,7 +61,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="tab-pane fade" id="categorie">
+                                        <div class="tab-pane fade" id="category">
                                             <!-- CATEGORIE -->
                                             <div class="container">
                                                 <div class="row">
@@ -85,7 +85,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="tab-pane fade" id="produits">
+                                        <div class="tab-pane fade" id="product">
                                             <!-- PRODUITS -->
                                             <div class="container">
                                                 <div class="row">
@@ -184,18 +184,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr>
-                                                                    <th scope="row">1</th>
-                                                                    <td>Electra</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">2</th>
-                                                                    <td>Haro</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">3</th>
-                                                                    <td colspan="2">Heller</td>
-                                                                </tr>
+                                                               @yield('liste_des_marques')
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -217,18 +206,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr>
-                                                                    <th scope="row">1</th>
-                                                                    <td>Children Bicycles</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">2</th>
-                                                                    <td>Comfort Bicycles</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">3</th>
-                                                                    <td colspan="2">Cruisers Bicycles</td>
-                                                                </tr>
+                                                                @yield('liste_des_categories')
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -255,30 +233,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr>
-                                                                    <th scope="row">1</th>
-                                                                    <td>Trek</td>
-                                                                    <td>2016</td>
-                                                                    <td>Electra</td>
-                                                                    <td>Children</td>
-                                                                    <td>1000,00</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">2</th>
-                                                                    <td>Surly</td>
-                                                                    <td>2016</td>
-                                                                    <td>Haro</td>
-                                                                    <td>Confort</td>
-                                                                    <td>1000,00</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">3</th>
-                                                                    <td>Heller</td>
-                                                                    <td>Ritchey</td>
-                                                                    <td>2016</td>
-                                                                    <td>Cruiser</td>
-                                                                    <td>1000,00</td>
-                                                                </tr>
+                                                                @yield('liste_des_produits')
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -304,30 +259,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr>
-                                                                    <th scope="row">1</th>
-                                                                    <td>Trek</td>
-                                                                    <td>23</td>
-                                                                    <td>Magasin</td>
-                                                                    <td>Production</td>
-                                                                    <td>1000.00</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">2</th>
-                                                                    <td>Surly</td>
-                                                                    <td>18</td>
-                                                                    <td>Magasin</td>
-                                                                    <td>Production</td>
-                                                                    <td>1000.00</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">3</th>
-                                                                    <td>Heller</td>
-                                                                    <td>134</td>
-                                                                    <td>Magasin</td>
-                                                                    <td>Production</td>
-                                                                    <td>1000.00</td>
-                                                                </tr>
+                                                                @yield('liste_des_stocks')
                                                             </tbody>
                                                         </table>
                                                     </div>

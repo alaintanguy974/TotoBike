@@ -1,25 +1,23 @@
-
-
-
 @extends('template')
+
 
 @section('contenu')
 
-<h4>CREATION d'une nouvelle catégorie</h4>
-<form name="category" action="{{ !empty($category) ? url('/category/'.$category->getId().'/edit') : url('/category/create')}}" method="post">
+<h4>MODIFIER le nom de la catégorie</h4>
+
+<form class="col-md-6" name="categorY" action="{{ !empty($category) ? url('/category/'.$category->getId().'/edit') : url('/category/create')}}" method="POST">
     @csrf
-    <div class="form-category">
-        <input name="category" type="text" class="form-control form-control-user" id="category" placeholder="New category" value="{{ !empty($category) ? $category->getName()  : "" }}">
+    <div class="form-group row, form-categorY">
+        <label for="category" class="col-md-3 col-form-label">Nom :</label>
+        <div class="col-md-9">
+            <input name="categorY" type="text" class="form-control form-control-user" id="category" placeholder="Nouvelle categorie" value="{{ !empty($category) ? $category->getName()  : "" }}">
+        </div>
     </div>
-    <br>
-    <input class="btn btn-primary btn-user btn-block" type="submit" value="submit">
+    <div class="form-group row">
+        <div class="col">
+            <input class="btn btn-primary btn-user btn-block" type="submit" value="submit">
+        </div>
+    </div>
 </form>
-
-@stop
-
-
-
-
-
 
 

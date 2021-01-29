@@ -107,20 +107,10 @@
 <ul>
     @foreach($stock as $sto )
 
-    <li>{{$sto->getQuantity()}}</li>
-    <li>{{$sto->getStore()->getName()}} </li>
-    <li>{{$sto->getProduct()->getName()}} </li>
-    <li>
-        <a href="{{ url('/stock/'.$sto->getStore()->getId() .'/'.$sto->getProduct()->getId().'/create') }}">
-            <button type="button" class="btn btn-primary mb-1">Ajouter</button>
-        </a>
-        <a href="{{ url('/stock/'.$sto->getStore()->getId() .'/'.$sto->getProduct()->getId().'/edit') }}">
-            <button type="button" class="btn btn-secondary mb-1">Modifier</button>
-        </a>
-        <a href="{{ url('/stock/'.$sto->getStore()->getId() .'/'.$sto->getProduct()->getId().'/delete') }}">
-            <button type="button" class="btn btn-danger mb-1">Suprimer</button>
-        </a>
-    </li>
+    <li><mark>QUANTITE : </mark>{{$sto->getQuantity()}}</li>
+    <li><mark>MAGASIN  : </mark>{{$sto->getStore()->getName()}} </li>
+    <li><mark>ARTICLE  :</mark>{{$sto->getProduct()->getName()}} </li>
+    <hr>
 
     @endforeach
 </ul>

@@ -15,5 +15,5 @@ class CategoryException extends Exception{
         error_log("une exception");
         Log::debug('Une exception');
     
+    }
 }
-

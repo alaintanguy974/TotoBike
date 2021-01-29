@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jan 28 2021 18:44:13 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/CategoryController.php
+* resources/views/form.blade.php
+* resources/views/formCategory.blade.php
+
+
+Created files:
+* .autogit/logs/log-28-0-2021-17-14-54.txt
+
+
+Deleted files:
+* resources/views/formProduct.php
+
+
+Renamed files:
