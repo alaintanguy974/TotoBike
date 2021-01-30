@@ -9,12 +9,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class BrandController extends Controller{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(BrandManagerInterface $brandManager){
+       public function index(BrandManagerInterface $brandManager){
         // recuperer tous les brands        
         // entre ici MODEL de MVC
         $brand = $brandManager->getAllBrands();

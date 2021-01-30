@@ -15,7 +15,6 @@ class CategoryController extends Controller{
                 // entre ici MODEL de MVC
         $category = $categoryManager->getAllCategories();
 
-
         // et ici 
         return view('listeCategory')->with(['category' => $category]);
 

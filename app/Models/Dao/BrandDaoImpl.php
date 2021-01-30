@@ -37,7 +37,7 @@ class BrandDaoImpl implements BrandDaoInterface{
             $brand->setName($resultbdd['brand_name']);
     
             return $brand;
-        }catch(Exception $e){
+            }catch(Exception $e){
             Log::error($e);
             throw new DaoException();
         }        
