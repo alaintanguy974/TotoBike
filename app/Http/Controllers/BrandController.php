@@ -31,9 +31,9 @@ class BrandController extends Controller{
        public function create(BrandRequest $request, BrandManagerInterface $brandManager){
         $brandName = $request->input('brand');
 
-        $brandName = new Brand();
-        $brandName->setName($brandName);
-        $brandManager->createBrand($brandName);
+        $brand = new Brand();
+        $brand->setName($brandName);
+        $brandManager->createBrand($brand);
               
         return redirect('/');
 

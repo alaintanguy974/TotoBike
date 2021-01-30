@@ -8,8 +8,7 @@
 
 <form class="col-md-6" name="category" action="{{ !empty($category) ? url('/category/'.$category->getId().'/edit') : url('/category/create')}}" method="POST">
     @csrf
-    <div class="form-group row form-category">
-        <label for="category" class="col-md-3 col-form-label">Nom :</label>
+    <div class="form-group row form-category">       
         <div class="col-md-9">
             <input name="category" type="text" class="form-control form-control-user" id="category" placeholder="Nouvelle categorie" value="{{ !empty($category) ? $category->getName()  : "" }}">
         </div>
@@ -21,4 +20,5 @@
     </div>
 </form>
 
+@stop
 
