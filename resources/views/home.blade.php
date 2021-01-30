@@ -54,6 +54,7 @@
     <td>{{ $p->getCategory()->getName() }}</td>
     <td>{{ $p->getPrice() }}</td>
     <td class="col -5">
+
         <a href="{{ url('/product/'.$p->getId().'/create') }}">
             <button type="button" class="btn btn-primary mb-1">Ajouter</button>
         </a>
@@ -80,9 +81,10 @@
     <td>{{ $sta->getPhone() }}</td>
     <td>{{ $sta->getActive() }}</td>
     <td>{{ $sta->getStore()->getName() }}</td>
-    <td>{{ $sta->getManager() }}</td>      
+    <td>{{ $sta->getManager() }}</td>
+
     <td class="col -5">
-        <a href="{{ url('/staff/'.$p->getId().'/create') }}">    
+        <a href="{{ url('/staff/'.$p->getId().'/create') }}">
             <button type="button" class="btn btn-primary mb-1">Ajouter</button>
         </a>
 
@@ -114,17 +116,8 @@
 @stop
 
 @section('liste_des_clients')
-        <a href="{{ url('/customer/'.$cl->getId().'/create') }}">
-            <button type="button" class="btn btn-primary mb-1">Ajouter</button>
-        </a>
-        <a href="{{ url('/customer/'.$cl->getId().'/edit') }}">
-            <button type="button" class="btn btn-secondary mb-1">Modifier</button>
-        </a>
-        <a href="{{ url('/customer/'.$cl->getId().'/delete') }}">
-            <button type="button" class="btn btn-danger mb-1">Suprimer</button>
-        </a>
 @foreach($customer as $cl)
-<tr>     
+<tr>
     <th>{{ $cl->getId() }}</th>
     <td>{{ $cl->getNames() }}</td>
     <td>{{ $cl->getName() }}</td>
@@ -134,7 +127,18 @@
     <td>{{ $cl->getCity() }}</td>
     <td>{{ $cl->getState() }}</td>
     <td>{{ $cl->getZipCode() }}</td>
-</tr>  
+    <td class="col -5">
+        <a href="{{ url('/customer/'.$cl->getId().'/create') }}">
+            <button type="button" class="btn btn-primary mb-1">Ajouter</button>
+        </a>
+        <a href="{{ url('/customer/'.$cl->getId().'/edit') }}">
+            <button type="button" class="btn btn-secondary mb-1">Modifier</button>
+        </a>
+        <a href="{{ url('/customer/'.$cl->getId().'/delete') }}">
+            <button type="button" class="btn btn-danger mb-1">Suprimer</button>
+        </a>
+    </td>
+</tr>
 @endforeach
 @stop
 
