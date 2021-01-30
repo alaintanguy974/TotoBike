@@ -114,20 +114,6 @@
 @stop
 
 @section('liste_des_clients')
-@foreach($customer as $cl)
-<tr>
-    <th>{{ $cl->getId() }}</th>
-    <td>{{ $cl->getNames() }}</td>
-    <td>{{ $cl->getName() }}</td>
-    <td>{{ $cl->getPhone() }}</td>
-    <td>{{ $cl->getEmail() }}</td>
-    <td>{{ $cl->getStreet() }}</td>
-    <td>{{ $cl->getCity() }}</td>
-    <td>{{ $cl->getState() }}</td>
-    <td>{{ $cl->getZipCode() }}</td>
-    <td>
-    <div><br><br>
-
         <a href="{{ url('/customer/'.$cl->getId().'/create') }}">
             <button type="button" class="btn btn-primary mb-1">Ajouter</button>
         </a>
@@ -137,9 +123,18 @@
         <a href="{{ url('/customer/'.$cl->getId().'/delete') }}">
             <button type="button" class="btn btn-danger mb-1">Suprimer</button>
         </a>
-    </td>
-    </div>
-</tr>
+@foreach($customer as $cl)
+<tr>     
+    <th>{{ $cl->getId() }}</th>
+    <td>{{ $cl->getNames() }}</td>
+    <td>{{ $cl->getName() }}</td>
+    <td>{{ $cl->getPhone() }}</td>
+    <td>{{ $cl->getEmail() }}</td>
+    <td>{{ $cl->getStreet() }}</td>
+    <td>{{ $cl->getCity() }}</td>
+    <td>{{ $cl->getState() }}</td>
+    <td>{{ $cl->getZipCode() }}</td>
+</tr>  
 @endforeach
 @stop
 
