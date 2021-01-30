@@ -4,7 +4,7 @@ namespace App\Models\Manager;
 
 use App\Models\Models\Brand;
 
-interface BrandManagerInterface {
+interface BrandManagerInterface{
 
     public function getAllBrands();
     public function getBrandById($id);

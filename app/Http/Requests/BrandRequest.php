@@ -27,4 +27,11 @@ class BrandRequest extends FormRequest
             "brand" => "required|min:3"
         ];
     }
+    public function messages()
+    {
+        return [
+            "brand.required" => "Le champs est requis !",
+            "brand.min" => "Le champs est trop petit !"
+        ];
+    }
 }

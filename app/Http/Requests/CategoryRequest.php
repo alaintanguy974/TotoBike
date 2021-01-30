@@ -30,8 +30,8 @@ class CategoryRequest extends FormRequest
 
     public function messages(){
         return [
-            "categorie.required" => "Le champs est requis !",
-            "categorie.min" => "Le champs est trop petit !"
+            "category.required" => "Le champs est requis !",
+            "category.min" => "Le champs est trop petit !"
         ];
     }
 }
