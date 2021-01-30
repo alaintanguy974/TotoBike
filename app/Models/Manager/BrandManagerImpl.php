@@ -32,9 +32,11 @@ class BrandManagerImpl implements BrandManagerInterface{
     }
 
     public function deleteBrandById($id){
+        if($this->brandManagerInterface->countBrandWithBrandId($id) == 0){
             $this->brandDao->deleteBrandById($id);
-       
-        
+        }else{
+            throw new BrandException();
+        }
     }
     
 }

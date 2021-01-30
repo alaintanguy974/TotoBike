@@ -6,15 +6,7 @@
     <th>{{ $b->getId() }}</th>
     <td>{{ $b->getName() }}</td>
     <td>
-        <a href="{{ url('/brand/create') }}">
-            <button type="button" class="btn btn-primary mb-1">Ajouter</button>
-        </a>
-        <a href="{{ url('/brand/'.$b->getId().'/edit') }}">
-            <button type="button" class="btn btn-secondary mb-1">Modifier</button>
-        </a>
-        <a href="{{ url('/brand/'.$b->getId().'/delete') }}">
-            <button type="button" class="btn btn-danger mb-1">Suprimer</button>
-        </a>
+        @include('crud')
     </td>
 </tr>
 @endforeach
