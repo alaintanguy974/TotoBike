@@ -129,7 +129,7 @@
     <td>{{ $cl->getZipCode() }}</td>
 
 
-    <td class="col -5">
+    <td class="col -7">
         <a href="{{ url('/customer/'.$cl->getId().'/create') }}">
             <button type="button" class="btn btn-primary mb-1">Ajouter</button>
         </a>

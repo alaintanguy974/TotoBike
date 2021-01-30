@@ -150,7 +150,7 @@
             <!--FENETRE VENTE   ---------------------------------------------------------------------->
             <div class="tab-pane fade" id="ventes">
                 <div class="p-t-15">
-                    <div class="col-md-7">
+                    <div class="col-md-10">
                         <div class="card">
                             <div class="card-body">
                                 <h4>“Les yeux de celui qui achète sont dans la main de celui qui vend.”</h4>

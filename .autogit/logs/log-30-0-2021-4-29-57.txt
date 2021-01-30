@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jan 30 2021 04:29:57 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/BrandController.php
+* app/Http/Requests/BrandRequest.php
+* app/Models/Manager/BrandManagerImpl.php
+* resources/views/formBrand.blade.php
+* resources/views/formCategory.blade.php
+
+
+Created files:
+* .autogit/logs/log-29-0-2021-19-15-31.txt
+* app/Http/Controllers/HistController.php
+* app/Http/Controllers/ProductController.php
+* app/Http/Controllers/StockController.php
+
+
+Deleted files:
+
+
+Renamed files:
