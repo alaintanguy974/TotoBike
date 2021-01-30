@@ -8,19 +8,16 @@ use App\Models\Models\Brand;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class BrandController extends Controller
-{
+class BrandController extends Controller{
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index(BrandManagerInterface $brandManager){
-
         // recuperer tous les brands        
         // entre ici MODEL de MVC
         $brand = $brandManager->getAllBrands();
-
         // et ici 
         return view('listeBrand')->with(['brand' => $brand]);
     }
@@ -38,11 +35,10 @@ class BrandController extends Controller
 
        public function create(BrandRequest $request, BrandManagerInterface $brandManager){
         $brandName = $request->input('brand');
-        
-        $brand = new Brand();
-        $brand->setName($brandName);
 
-        $brandManager->createBrand($brand);
+        $brandName = new Brand();
+        $brandName->setName($brandName);
+        $brandManager->createBrand($brandName);
               
         return redirect('/');
 
@@ -52,7 +48,6 @@ class BrandController extends Controller
         $brand = new Brand();
         $brand->setId($id);
         $brand->setName($request->input("brand"));
-
         $brandManager->updateBrand($brand);
 
        
@@ -65,15 +60,13 @@ class BrandController extends Controller
         return redirect('/');
     }
 
-    public function allJson(BrandManagerInterface $brandManager){
-        //$brandsManager = new BrandManagerImpl();
+    public function allJson(BrandManagerInterface $brandManager){        
         // recuperer tous les brands        
         // entre ici MODEL de MVC
         $brand = $brandManager->getAllBrands();
         // et ici 
         return response()->json($brand);
-    }
-   
+    }   
     
 }
 

@@ -12,7 +12,7 @@
         <a href="{{ url('/brand/'.$b->getId().'/edit') }}">
             <button type="button" class="btn btn-secondary mb-1">Modifier</button>
         </a>
-        <a href="{{ url('/brand/'.$brand->getId().'/delete') }}">
+        <a href="{{ url('/brand/'.$b->getId().'/delete') }}">
             <button type="button" class="btn btn-danger mb-1">Suprimer</button>
         </a>
     </td>

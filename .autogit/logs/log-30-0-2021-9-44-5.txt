@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jan 30 2021 09:44:05 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/BrandController.php
+* resources/views/home.blade.php
+* resources/views/homeTemplate.blade.php
+
+
+Created files:
+* .autogit/logs/log-30-0-2021-7-31-45.txt
+
+
+Deleted files:
+* resources/views/listeBrands.blade.php
+
+
+Renamed files:
