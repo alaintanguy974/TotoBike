@@ -56,7 +56,7 @@ class BrandController extends Controller
         $brandManager->updateBrand($brand);
 
         //return view('test')->with(["catval"=> $cat]);
-        return redirect('/brand' . $brand->getId() . '/edit');
+        return redirect('/brand/' . $brand->getId() . '/edit');
     }
 
 

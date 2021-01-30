@@ -2,6 +2,7 @@
 
 @section('contenu')
 
+
 <h4>{{ !empty($brand) ? "Modifier" : "Créer" }} </h4>
 
 
