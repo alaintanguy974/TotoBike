@@ -16,10 +16,7 @@
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reporting">REPORTING</a>
             </li>
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#administration">ADMINISTRATION</a>
-            </li>
-            <li>
-            @include('crud')
-            </li>
+            </li>            
         </ul>
         <div class="tab-content">
             <!--FENETRE  PRODUCTION  ---------------------------------------------------------------------------->
@@ -171,6 +168,10 @@
                                         </li>
                                         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#vente">Vente</a>
                                         </li>
+                                        <li>
+                                            @include('crud')
+                                        </li>
+
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane fade show active" id="marqueBis" role="tabpanel">
