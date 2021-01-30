@@ -8,7 +8,7 @@
     <h4 class="card-title">Bikes Stores</h4>
     <!------------ PREMIERE LIGNE (PRODUCTION VENTE REPORTING ADMINISTRATION) --------------------------------------------->
     <div class="default-tab">
-        <ul class="nav nav-tabs mb-8" role="tablist">
+        <ul class="nav nav-tabs mb-8" role="tablist" style="background-color: lightskyblue;">
             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#production">PRODUCTION</a>
             </li>
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#ventes">VENTES</a>

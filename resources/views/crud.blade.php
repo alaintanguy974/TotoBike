@@ -4,11 +4,11 @@
 @section('contenu')
 
 
-<a href="{{ url('/') }}">
+<a href="{{ url('/home') }}">
     <button type="button" class="btn btn-primary mb-1">Ajouter</button>
 </a>
 
-<a href="{{ url('/') }}">
+<a href="{{ url('/home') }}">
     <button type="button" class="btn btn-secondary mb-1">Modifier</button>
 </a>
 <a href="{{ url('/home') }}">
