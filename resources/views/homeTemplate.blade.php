@@ -270,7 +270,7 @@
                                             <!-- PRODUITS -->
                                             <div class="container">
                                                 <div class="row">
-                                                    <div class="col-xl-12">
+                                                    <div class="col-xl-10">
                                                         <h4>Liste des clients</h4>
                                                         <table class="table table-sm table-hover">
                                                             <thead>

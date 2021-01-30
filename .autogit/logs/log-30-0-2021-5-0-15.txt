@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jan 30 2021 05:00:15 GMT+0400 (heure de La Réunion)
+------------------------------------------------------
+
+Modified files:
+* resources/views/home.blade.php
+* resources/views/homeTemplate.blade.php
+
+
+Created files:
+* .autogit/logs/log-30-0-2021-4-29-57.txt
+* app/Http/Controllers/ClientController.php
+* app/Http/Controllers/ReportController.php
+
+
+Deleted files:
+
+
+Renamed files:

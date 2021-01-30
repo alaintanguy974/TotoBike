@@ -54,7 +54,6 @@
     <td>{{ $p->getCategory()->getName() }}</td>
     <td>{{ $p->getPrice() }}</td>
     <td class="col -5">
-
         <a href="{{ url('/product/'.$p->getId().'/create') }}">
             <button type="button" class="btn btn-primary mb-1">Ajouter</button>
         </a>
@@ -81,10 +80,9 @@
     <td>{{ $sta->getPhone() }}</td>
     <td>{{ $sta->getActive() }}</td>
     <td>{{ $sta->getStore()->getName() }}</td>
-    <td>{{ $sta->getManager() }}</td>
-
+    <td>{{ $sta->getManager() }}</td>      
     <td class="col -5">
-        <a href="{{ url('/staff/'.$p->getId().'/create') }}">
+        <a href="{{ url('/staff/'.$p->getId().'/create') }}">    
             <button type="button" class="btn btn-primary mb-1">Ajouter</button>
         </a>
 
@@ -127,9 +125,9 @@
     <td>{{ $cl->getCity() }}</td>
     <td>{{ $cl->getState() }}</td>
     <td>{{ $cl->getZipCode() }}</td>
+    <td>
+    <div><br><br>
 
-
-    <td class="col -7">
         <a href="{{ url('/customer/'.$cl->getId().'/create') }}">
             <button type="button" class="btn btn-primary mb-1">Ajouter</button>
         </a>
@@ -140,6 +138,7 @@
             <button type="button" class="btn btn-danger mb-1">Suprimer</button>
         </a>
     </td>
+    </div>
 </tr>
 @endforeach
 @stop
